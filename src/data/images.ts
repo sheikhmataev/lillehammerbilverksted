@@ -6,6 +6,11 @@ export interface ImageData {
   blurDataURL?: string;
 }
 
+// Prepends basePath so images resolve correctly on GitHub Pages subpath deploys.
+// When NEXT_PUBLIC_BASE_PATH is "" (custom domain), this is a no-op.
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "/lillehammerbilverksted";
+const img = (path: string) => `${base}${path}`;
+
 // Caption texts from Facebook posts
 const captions: Record<string, string> = {
   "9_2022_12_14__13_32_17.jpg":
@@ -21,12 +26,12 @@ const captions: Record<string, string> = {
 // Hero candidates — newest, sharpest workshop shots
 export const heroImages: ImageData[] = [
   {
-    src: "/images/1_2024_03_05__10_58_21.jpg",
+    src: img("/images/1_2024_03_05__10_58_21.jpg"),
     alt: "Lillehammer Bilverksted — verkstedhall med løftebukker og verktøy",
     blurDataURL: blurDataURLs["1_2024_03_05__10_58_21.jpg"],
   },
   {
-    src: "/images/2_2024_03_05__10_58_21.jpg",
+    src: img("/images/2_2024_03_05__10_58_21.jpg"),
     alt: "Lillehammer Bilverksted — arbeidsområde med biler inne til service",
     blurDataURL: blurDataURLs["2_2024_03_05__10_58_21.jpg"],
   },
@@ -35,12 +40,12 @@ export const heroImages: ImageData[] = [
 // Owner photos
 export const ownerImages = {
   nasih: {
-    src: "/images/nasih2.png",
+    src: img("/images/nasih2.png"),
     alt: "Nasih Raof Ahmed — daglig leder, Lillehammer Bilverksted AS",
     blurDataURL: blurDataURLs["nasih2.png"],
   },
   nasihEier: {
-    src: "/images/nasih_eier.png",
+    src: img("/images/nasih_eier.png"),
     alt: "Nasih Raof Ahmed — eier og styreleder, Lillehammer Bilverksted AS",
     blurDataURL: blurDataURLs["nasih_eier.png"],
   },
@@ -86,7 +91,7 @@ const galleryFileNames = [
 ];
 
 export const galleryImages: ImageData[] = galleryFileNames.map((filename) => ({
-  src: `/images/${filename}`,
+  src: img(`/images/${filename}`),
   alt:
     captions[filename] ||
     `Lillehammer Bilverksted — bilde fra verkstedet`,
