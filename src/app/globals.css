@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-charcoal: #151515;
+  --color-surface: #2A2A2A;
+  --color-red: #BF2C2C;
+  --color-red-hover: #D93333;
+  --color-warm-white: #F5F2EE;
+  --color-amber: #E8874A;
+  --color-muted: #A0A0A0;
+  --font-heading: "Barlow Condensed", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-charcoal);
+  color: var(--color-warm-white);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-red);
+  color: white;
+}
