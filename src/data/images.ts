@@ -26,9 +26,9 @@ const captions: Record<string, string> = {
 // Hero candidates — newest, sharpest workshop shots
 export const heroImages: ImageData[] = [
   {
-    src: img("/images/1_2024_03_05__10_58_21.jpg"),
+    src: img("/images/3_2023_12_02__21_07_04.jpg"),
     alt: "Lillehammer Bilverksted — verkstedhall med løftebukker og verktøy",
-    blurDataURL: blurDataURLs["1_2024_03_05__10_58_21.jpg"],
+    blurDataURL: blurDataURLs["3_2023_12_02__21_07_04.jpg"],
   },
   {
     src: img("/images/2_2024_03_05__10_58_21.jpg"),
