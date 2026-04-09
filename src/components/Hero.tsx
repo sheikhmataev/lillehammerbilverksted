@@ -34,7 +34,9 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#kontakt"
+            href="https://www.mekopartner.no/bilverksted/lillehammer/lillehammer-bilverksted-as/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3.5 bg-red hover:bg-red-hover text-warm-white font-semibold rounded transition-colors text-lg"
           >
             Bestill time
