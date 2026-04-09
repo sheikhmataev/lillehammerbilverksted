@@ -1,35 +1,48 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "/lillehammerbilverksted";
+
+// Anchor links go to home page sections; Galleri goes to its own page
 const navLinks = [
-  { label: "Om oss", href: "#om-oss" },
-  { label: "Tjenester", href: "#tjenester" },
-  { label: "Galleri", href: "#galleri" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Om oss", href: `${base}/#om-oss` },
+  { label: "Tjenester", href: `${base}/#tjenester` },
+  { label: "Galleri", href: `${base}/galleri` },
+  { label: "Kontakt", href: `${base}/#kontakt` },
 ];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isGalleri = pathname.endsWith("/galleri");
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/90 backdrop-blur-md border-b border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <a href="#" className="font-heading text-xl font-bold tracking-wide text-warm-white">
+        <a href={`${base}/`} className="font-heading text-xl font-bold tracking-wide text-warm-white">
           Lillehammer Bilverksted
         </a>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-warm-white/70 hover:text-warm-white transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const active = link.href.endsWith("/galleri") && isGalleri;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`text-sm transition-colors ${
+                  active
+                    ? "text-warm-white font-semibold"
+                    : "text-warm-white/70 hover:text-warm-white"
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
           <a
             href="tel:93988885"
             className="text-sm font-semibold text-warm-white bg-red hover:bg-red-hover transition-colors px-4 py-2 rounded"
