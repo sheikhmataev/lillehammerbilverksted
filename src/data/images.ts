@@ -8,7 +8,7 @@ export interface ImageData {
 
 // Prepends basePath so images resolve correctly on GitHub Pages subpath deploys.
 // When NEXT_PUBLIC_BASE_PATH is "" (custom domain), this is a no-op.
-const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "/lillehammerbilverksted";
+const base = "";
 const img = (path: string) => `${base}${path}`;
 
 // Caption texts from Facebook posts

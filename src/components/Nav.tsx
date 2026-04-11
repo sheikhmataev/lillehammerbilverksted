@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "/lillehammerbilverksted";
+const base = "";
 
 // Anchor links go to home page sections; Galleri goes to its own page
 const navLinks = [
