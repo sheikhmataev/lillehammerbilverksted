@@ -96,7 +96,7 @@ export default function Contact() {
               </div>
 
               <a
-                href="https://www.mekopartner.no/bilverksted/lillehammer/lillehammer-bilverksted-as/"
+                href="https://www.  partner.no/bilverksted/lillehammer/lillehammer-bilverksted-as/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center justify-center w-full px-6 py-3.5 bg-red hover:bg-red-hover text-warm-white font-semibold rounded transition-colors"
