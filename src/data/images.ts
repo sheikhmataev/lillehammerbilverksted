@@ -94,6 +94,6 @@ export const galleryImages: ImageData[] = galleryFileNames.map((filename) => ({
   src: img(`/images/${filename}`),
   alt:
     captions[filename] ||
-    `Lillehammer Bilverksted — bilde fra verkstedet`,
+    `Lillehammer Bilverksted AS — profesjonell bilservice og reparasjon i Lillehammer`,
   blurDataURL: blurDataURLs[filename],
 }));

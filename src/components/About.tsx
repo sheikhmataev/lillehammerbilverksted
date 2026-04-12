@@ -16,7 +16,7 @@ export default function About() {
                 Om oss
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-warm-white leading-tight">
-                Ditt lokale MekoPartner bilverksted
+                Ditt lokale MekoPartner bilverksted i Lillehammer
               </h2>
               <div className="mt-6 space-y-4 text-warm-white/70 leading-relaxed">
                 <p>

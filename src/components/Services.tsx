@@ -55,7 +55,7 @@ export default function Services() {
               Tjenester
             </p>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-warm-white">
-              Komplette biltjenester
+              Bilservice, reparasjon og bilpleie i Lillehammer
             </h2>
           </div>
         </AnimateInView>
