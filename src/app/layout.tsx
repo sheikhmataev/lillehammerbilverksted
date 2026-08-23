@@ -150,7 +150,7 @@ export default function RootLayout({
     description:
       "Autorisert MekoPartner bilverksted i Lillehammer. Vi tilbyr profesjonell bilservice, reparasjoner, dekkskift, bilpleie og EU-kontroll for alle bilmerker.",
     sameAs: [
-      "https://www.mekopartner.no/bilverksted/lillehammer/lillehammer-bilverksted-as/",
+      "https://www.mekopartner.no/bilverksted/lillehammer/lillehammer-bilverksted-as/#bestillform",
     ],
     areaServed: [
       {
